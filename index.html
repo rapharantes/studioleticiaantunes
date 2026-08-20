@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Letícia Antunes Studio — Salão completo em Nova Suíça, Belo Horizonte</title>
+<meta name="description" content="Cabelo, unhas, estética facial e corporal no mesmo endereço, em Nova Suíça. Equipe especializada por serviço e esterilização em autoclave. Agende pelo WhatsApp.">
+<meta name="theme-color" content="#15171A">
+<link rel="canonical" href="https://leticiaantunesstudio.com.br/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Letícia Antunes Studio">
+<meta property="og:title" content="Letícia Antunes Studio — Salão completo em Nova Suíça, BH">
+<meta property="og:description" content="Cabelo, unhas, estética facial e corporal no mesmo endereço. Equipe especializada por serviço e esterilização em autoclave.">
+<meta property="og:image" content="assets/hero-poster.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/logo-gold.png">
+<link rel="preload" as="image" href="assets/hero-poster.webp" fetchpriority="high">
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/Marcellus-latin.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/DMSans-latin.woff2" crossorigin>
+<style>
+/* fontes hospedadas junto com a página: sem chamada a terceiros */
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:300 500;font-display:swap;
+  src:url('assets/fonts/DMSans-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:300 500;font-display:swap;
+  src:url('assets/fonts/DMSans-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+@font-face{font-family:'Marcellus';font-style:normal;font-weight:400;font-display:swap;
+  src:url('assets/fonts/Marcellus-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Marcellus';font-style:normal;font-weight:400;font-display:swap;
+  src:url('assets/fonts/Marcellus-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+
+/* ═══════════════ TOKENS ═══════════════ */
+:root{
+  /* cor — tirada dos materiais do estúdio: granito polido, luz fria, dourado da marca */
+  --ink:#15171A; --ink-soft:#1B1E21; --ink-line:#2B2F34;
+  --pearl:#EEEFEF; --pearl-2:#E5E6E6; --granite:#D7D9D9;
+  --gold:#C9A96E; --gold-lt:#E4CF9F; --gold-deep:#7C6230;
+  --body:#5F646A; --body-inv:rgba(238,239,239,.66);
+
+  /* tipografia */
+  --display:'Marcellus',Georgia,serif;
+  --sans:'DM Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+
+  /* espaçamento */
+  --gut:clamp(20px,5vw,64px);
+  --sec:clamp(72px,10vw,140px);
+  --maxw:1280px;
+
+  /* movimento — curvas contidas, para leitura calma */
+  --dur-quick:170ms; --dur-base:300ms; --dur-slow:520ms; --dur-page:900ms;
+  --ease-out:cubic-bezier(.22,1,.36,1);
+  --ease-soft:cubic-bezier(.25,1,.5,1);
+  --ease-inout:cubic-bezier(.76,0,.24,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:var(--sans);font-weight:300;font-size:16px;line-height:1.65;
+  color:var(--body);background:var(--pearl);overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+}
+img,video{display:block;max-width:100%;height:auto}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--ink);outline-offset:3px;border-radius:2px}
+.nav :focus-visible,.drawer :focus-visible,.hero :focus-visible,
+.on-dark :focus-visible,.dark :focus-visible,.dark--soft :focus-visible,
+.foot :focus-visible{outline-color:var(--gold)}
+::selection{background:var(--gold);color:var(--ink)}
+
+.skip{position:absolute;left:-9999px;top:0;z-index:999;background:var(--ink);color:var(--gold);padding:12px 20px;font-size:13px}
+.skip:focus{left:12px;top:12px}
+
+/* ═══════════════ TIPOGRAFIA ═══════════════ */
+.eyebrow{
+  font-size:clamp(10px,1.1vw,11px);letter-spacing:.34em;text-transform:uppercase;
+  font-weight:500;color:var(--gold-deep);display:flex;align-items:center;gap:14px;
+}
+.eyebrow::before{content:'';width:28px;height:1px;background:var(--gold);flex:none}
+.on-dark .eyebrow{color:var(--gold)}
+h1,h2,h3{font-family:var(--display);font-weight:400;letter-spacing:-.005em;color:var(--ink)}
+h1{font-size:clamp(34px,4.9vw,66px);line-height:1.06}
+h2{font-size:clamp(30px,4.4vw,58px);line-height:1.1}
+h3{font-size:clamp(19px,2vw,23px);line-height:1.25}
+.on-dark h1,.on-dark h2,.on-dark h3{color:var(--pearl)}
+.gold{color:var(--gold-deep)}
+.on-dark .gold{color:var(--gold)}
+.lead{font-size:clamp(16px,1.5vw,18px);line-height:1.75;max-width:46ch}
+.on-dark,.on-dark p{color:var(--body-inv)}
+.wrap{max-width:var(--maxw);margin:0 auto;padding-inline:var(--gut)}
+section{padding-block:var(--sec)}
+.rule{width:100%;height:1px;background:var(--granite);border:0}
+.on-dark .rule{background:var(--ink-line)}
+
+/* ═══════════════ BOTÕES ═══════════════ */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  font-family:var(--sans);font-size:12px;font-weight:500;letter-spacing:.2em;
+  text-transform:uppercase;text-decoration:none;padding:17px 34px;border:1px solid transparent;
+  position:relative;overflow:hidden;cursor:pointer;
+  transition:color var(--dur-base) var(--ease-soft),border-color var(--dur-base) var(--ease-soft);
+}
+.btn span{position:relative;z-index:1}
+.btn::before{
+  content:'';position:absolute;inset:0;z-index:0;background:var(--gold-lt);
+  transform:scaleY(0);transform-origin:bottom;
+  transition:transform var(--dur-base) var(--ease-out);
+}
+.btn:hover::before,.btn:focus-visible::before{transform:scaleY(1)}
+.btn--solid{background:var(--gold);color:var(--ink)}
+.btn--line{border-color:var(--ink);color:var(--ink)}
+.btn--line:hover,.btn--line:focus-visible{color:var(--ink);border-color:var(--gold-lt)}
+.on-dark .btn--line{border-color:rgba(238,239,239,.34);color:var(--pearl)}
+.on-dark .btn--line:hover,.on-dark .btn--line:focus-visible{color:var(--ink);border-color:var(--gold-lt)}
+.btn--ghost{
+  padding:0;font-size:12px;letter-spacing:.18em;color:var(--ink);
+  border-bottom:1px solid var(--granite);padding-bottom:7px;
+}
+.btn--ghost::before{display:none}
+.btn--ghost::after{content:'';width:18px;height:1px;background:currentColor;transition:width var(--dur-base) var(--ease-out)}
+.btn--ghost:hover{color:var(--gold-deep);border-color:var(--gold)}
+.btn--ghost:hover::after{width:30px}
+.on-dark .btn--ghost{color:var(--pearl);border-color:var(--ink-line)}
+.on-dark .btn--ghost:hover{color:var(--gold);border-color:var(--gold)}
+
+/* ═══════════════ NAV ═══════════════ */
+.nav{
+  position:fixed;inset:0 0 auto;z-index:90;display:flex;align-items:center;
+  justify-content:space-between;gap:24px;padding:20px var(--gut);
+  background:rgba(21,23,26,0);backdrop-filter:blur(0px);
+  transition:background var(--dur-slow) var(--ease-soft),
+             padding var(--dur-slow) var(--ease-soft),
+             backdrop-filter var(--dur-slow) var(--ease-soft);
+}
+.nav.is-stuck{background:rgba(21,23,26,.9);backdrop-filter:blur(14px) saturate(1.2);padding-block:12px}
+.nav::after{
+  content:'';position:absolute;left:0;right:0;bottom:0;height:1px;
+  background:linear-gradient(90deg,var(--gold),var(--gold-lt));
+  transform:scaleX(0);transform-origin:left;opacity:.75;
+}
+@supports (animation-timeline:scroll()){
+  .nav::after{animation:grow linear both;animation-timeline:scroll(root block)}
+  @keyframes grow{to{transform:scaleX(1)}}
+}
+.nav__logo{display:block;flex:none}
+.nav__logo img{height:26px;width:auto;transition:height var(--dur-slow) var(--ease-soft)}
+.nav.is-stuck .nav__logo img{height:22px}
+.nav__links{display:flex;gap:34px;list-style:none}
+.nav__links a{
+  font-size:11px;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;
+  color:rgba(238,239,239,.72);position:relative;padding-block:4px;
+  transition:color var(--dur-quick) var(--ease-soft);
+}
+.nav__links a::after{
+  content:'';position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--gold);
+  transform:scaleX(0);transform-origin:right;transition:transform var(--dur-base) var(--ease-out);
+}
+.nav__links a:hover{color:var(--pearl)}
+.nav__links a:hover::after{transform:scaleX(1);transform-origin:left}
+.nav__cta{
+  font-size:11px;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;
+  color:var(--gold);border:1px solid var(--gold);padding:11px 22px;flex:none;
+  transition:background var(--dur-base) var(--ease-soft),color var(--dur-base) var(--ease-soft);
+}
+.nav__cta:hover,.nav__cta:focus-visible{background:var(--gold);color:var(--ink)}
+.burger{display:none;width:40px;height:40px;background:none;border:0;cursor:pointer;position:relative;flex:none}
+.burger i{
+  position:absolute;left:9px;width:22px;height:1px;background:var(--pearl);
+  transition:transform var(--dur-base) var(--ease-inout),opacity var(--dur-quick);
+}
+.burger i:nth-child(1){top:15px}
+.burger i:nth-child(2){top:22px}
+.burger[aria-expanded="true"] i:nth-child(1){transform:translateY(3.5px) rotate(45deg)}
+.burger[aria-expanded="true"] i:nth-child(2){transform:translateY(-3.5px) rotate(-45deg)}
+.drawer{
+  position:fixed;inset:0;z-index:80;background:rgba(21,23,26,.98);backdrop-filter:blur(8px);
+  display:flex;flex-direction:column;justify-content:center;gap:6px;padding:0 var(--gut);
+  opacity:0;visibility:hidden;transition:opacity var(--dur-base) var(--ease-soft),visibility var(--dur-base);
+}
+.drawer.is-open{opacity:1;visibility:visible}
+.drawer a{
+  font-family:var(--display);font-size:clamp(26px,7vw,38px);color:var(--pearl);
+  text-decoration:none;padding-block:12px;border-bottom:1px solid var(--ink-line);
+  opacity:0;translate:0 14px;transition:color var(--dur-quick),opacity var(--dur-base) var(--ease-out),translate var(--dur-base) var(--ease-out);
+}
+.drawer.is-open a{opacity:1;translate:0 0}
+.drawer a:hover{color:var(--gold)}
+.drawer a:nth-child(1){transition-delay:60ms}.drawer a:nth-child(2){transition-delay:100ms}
+.drawer a:nth-child(3){transition-delay:140ms}.drawer a:nth-child(4){transition-delay:180ms}
+.drawer a:nth-child(5){transition-delay:220ms}
+.drawer .btn--solid{color:var(--ink)}
+.drawer .btn{margin-top:28px;font-size:11.5px;letter-spacing:.16em;opacity:0;translate:0 14px;transition-delay:260ms;
+  transition:opacity var(--dur-base) var(--ease-out),translate var(--dur-base) var(--ease-out)}
+.drawer.is-open .btn{opacity:1;translate:0 0}
+
+/* ═══════════════ HERO ═══════════════ */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;padding:0;isolation:isolate;background:var(--ink)}
+.hero__media{position:absolute;inset:0;z-index:-2;overflow:hidden}
+.hero__media video,.hero__media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 45%}
+.hero__media video{opacity:0;transition:opacity 900ms var(--ease-soft)}
+.hero__media video.is-ready{opacity:1}
+.hero__scrim{
+  position:absolute;inset:0;z-index:-1;
+  background:
+    linear-gradient(to top,rgba(21,23,26,.95) 0%,rgba(21,23,26,.7) 40%,rgba(21,23,26,.34) 70%,rgba(21,23,26,.55) 100%),
+    linear-gradient(100deg,rgba(21,23,26,.78) 0%,rgba(21,23,26,.42) 46%,rgba(21,23,26,.12) 78%);
+}
+.hero__inner{width:100%;max-width:var(--maxw);margin:0 auto;padding:clamp(96px,13vh,120px) var(--gut) clamp(40px,7vh,72px);position:relative}
+/* assinatura: o quadro do monograma LA, redesenhado em volta da chamada */
+.hero__box::before{content:'';position:absolute;inset:-32px -60px -32px -40px;z-index:0;
+  background:radial-gradient(115% 95% at 22% 58%,rgba(21,23,26,.74) 0%,rgba(21,23,26,.5) 45%,rgba(21,23,26,0) 78%)}
+.hero__box{position:relative;max-width:720px;padding:clamp(24px,2.6vw,38px) clamp(22px,2.6vw,40px) clamp(26px,2.8vw,42px)}
+.hero__frame{position:absolute;inset:0;z-index:0;pointer-events:none}
+.hero__frame i{position:absolute;background:var(--gold);box-shadow:0 0 12px rgba(21,23,26,.7)}
+.hero__frame i:nth-child(1),.hero__frame i:nth-child(3){left:0;right:0;height:1px;scale:0 1}
+.hero__frame i:nth-child(2),.hero__frame i:nth-child(4){top:0;bottom:0;width:1px;scale:1 0}
+.hero__frame i:nth-child(1){top:0;transform-origin:left;animation:drawX .56s var(--ease-inout) .25s forwards}
+.hero__frame i:nth-child(2){right:0;transform-origin:top;animation:drawY .44s var(--ease-inout) .75s forwards}
+.hero__frame i:nth-child(3){bottom:0;transform-origin:right;animation:drawX .56s var(--ease-inout) 1.13s forwards}
+.hero__frame i:nth-child(4){left:0;transform-origin:bottom;animation:drawY .44s var(--ease-inout) 1.63s forwards}
+@keyframes drawX{to{scale:1 1}}
+@keyframes drawY{to{scale:1 1}}
+.hero__box>*:not(.hero__frame){position:relative;z-index:1}
+.hero__logo{width:min(340px,66vw);margin-bottom:clamp(22px,3.2vh,34px)}
+.hero h1{color:var(--pearl);max-width:14ch;margin-bottom:18px;text-shadow:0 2px 34px rgba(21,23,26,.5)}
+.hero h1 .gold{color:var(--gold)}
+.hero .hero__sub{color:rgba(238,239,239,.82);font-size:clamp(15px,1.5vw,17px);max-width:42ch;line-height:1.65;margin-bottom:clamp(24px,3.4vh,34px)}
+.hero__actions{display:flex;align-items:center;gap:clamp(16px,3vw,28px);flex-wrap:wrap}
+.hero__cue{
+  position:absolute;right:var(--gut);bottom:clamp(56px,9vh,96px);display:flex;flex-direction:column;
+  align-items:center;gap:12px;color:rgba(238,239,239,.5);font-size:9px;letter-spacing:.3em;
+  text-transform:uppercase;text-decoration:none;transition:color var(--dur-base)
+}
+.hero__cue:hover{color:var(--gold)}
+.hero__cue i{display:block;width:1px;height:54px;background:linear-gradient(var(--gold),transparent);overflow:hidden;position:relative}
+.hero__cue i::after{content:'';position:absolute;inset:0;background:var(--pearl);animation:cue 2.6s var(--ease-inout) infinite}
+@keyframes cue{0%{transform:translateY(-100%)}55%,100%{transform:translateY(100%)}}
+/* entrada do hero: um movimento só, escalonado */
+.hero__logo,.hero h1,.hero__sub,.hero__actions{opacity:0;animation:rise var(--dur-page) var(--ease-out) forwards}
+.hero__logo{animation-delay:.15s}
+.hero h1{animation-delay:.32s}
+.hero__sub{animation-delay:.46s}
+.hero__actions{animation-delay:.58s}
+@keyframes rise{from{opacity:0;translate:0 22px}to{opacity:1;translate:0 0}}
+
+/* ═══════════════ FAIXA DE FATOS ═══════════════ */
+.facts{background:var(--ink);color:var(--body-inv);padding-block:0}
+.facts__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--ink-line)}
+.fact{background:var(--ink);padding:clamp(28px,3.4vw,44px) clamp(20px,2.4vw,34px)}
+.fact dt{font-family:var(--display);font-size:clamp(24px,2.6vw,34px);color:var(--gold);line-height:1.1;margin-bottom:8px}
+.fact dd{font-size:12px;letter-spacing:.06em;color:rgba(238,239,239,.55);line-height:1.5}
+
+/* ═══════════════ SPLIT (estúdio / noivas) ═══════════════ */
+.split{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(36px,6vw,92px);align-items:center}
+.split--flip .split__media{order:2}
+.figure{position:relative}
+.figure img{width:100%;height:auto;object-fit:cover}
+.figure::after{ /* moldura deslocada — eco do quadro do logotipo */
+  content:'';position:absolute;inset:auto -14px -14px auto;width:62%;height:62%;
+  border:1px solid var(--gold);opacity:.55;z-index:-1;
+}
+.figure--left::after{inset:-14px auto auto -14px}
+.split__body>*+*{margin-top:22px}
+.split__list{list-style:none;display:flex;flex-direction:column;gap:0;margin-top:34px}
+.split__list li{display:flex;gap:16px;padding-block:14px;border-top:1px solid var(--granite);font-size:14.5px;color:var(--ink)}
+.on-dark .split__list li{border-color:var(--ink-line);color:var(--pearl)}
+.split__list li:last-child{border-bottom:1px solid var(--granite)}
+.on-dark .split__list li:last-child{border-color:var(--ink-line)}
+.split__list b{font-weight:500;flex:none;color:var(--gold-deep);font-size:12px;letter-spacing:.14em;text-transform:uppercase;padding-top:3px;width:88px}
+.on-dark .split__list b{color:var(--gold)}
+
+/* ═══════════════ SERVIÇOS ═══════════════ */
+.services{background:var(--pearl-2)}
+.services__head{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap;margin-bottom:clamp(38px,5vw,64px)}
+.services__head h2{max-width:14ch}
+.services__head p{max-width:34ch;font-size:15px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--granite);border-block:1px solid var(--granite)}
+.card{
+  background:var(--pearl);display:flex;flex-direction:column;text-decoration:none;
+  position:relative;overflow:hidden;transition:background var(--dur-slow) var(--ease-soft);
+}
+.card:hover{background:#fff}
+.card__img{aspect-ratio:4/3;overflow:hidden;background:var(--granite)}
+.card__img img{width:100%;height:100%;object-fit:cover;transition:scale 700ms var(--ease-soft)}
+.card:hover .card__img img,.card:focus-visible .card__img img{scale:1.045}
+.card__body{padding:clamp(22px,2.4vw,32px);flex:1;display:flex;flex-direction:column}
+.card h3{margin-bottom:10px}
+.card p{font-size:14px;line-height:1.65;flex:1}
+.card__more{margin-top:20px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);display:flex;align-items:center;gap:9px}
+.card__more::after{content:'';width:14px;height:1px;background:currentColor;transition:width var(--dur-base) var(--ease-out)}
+.card:hover .card__more::after{width:26px}
+.card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--gold);z-index:2;
+  transform:scaleX(0);transform-origin:left;transition:transform var(--dur-slow) var(--ease-out);
+}
+.card:hover::before,.card:focus-within::before{transform:scaleX(1)}
+
+/* ═══════════════ SEÇÕES ESCURAS ═══════════════ */
+.dark{background:var(--ink)}
+.dark--soft{background:var(--ink-soft)}
+
+/* diferenciais */
+.diffs{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--ink-line);margin-top:clamp(38px,5vw,60px)}
+.diff{background:var(--ink);padding:clamp(30px,3.6vw,48px)}
+.diff__n{font-family:var(--display);font-size:13px;letter-spacing:.2em;color:var(--gold);display:block;margin-bottom:18px}
+.diff h3{margin-bottom:12px}
+.diff p{font-size:14.5px;line-height:1.7}
+
+/* ═══════════════ TRABALHOS ═══════════════ */
+.works{background:var(--ink);padding-bottom:0}
+.works__head{max-width:var(--maxw);margin:0 auto clamp(32px,4vw,52px);padding-inline:var(--gut)}
+.works__head h2{margin-top:16px}
+.works__head p{margin-top:14px;max-width:44ch;font-size:15px}
+.works__grid{display:grid;grid-template-columns:repeat(6,1fr);gap:1px;background:var(--ink-line);border-top:1px solid var(--ink-line)}
+.works__grid figure{aspect-ratio:1;overflow:hidden;background:var(--ink-soft)}
+.works__grid img{width:100%;height:100%;object-fit:cover;transition:scale 800ms var(--ease-soft)}
+.works__grid figure:hover img{scale:1.05}
+
+/* ═══════════════ AMBIENTE ═══════════════ */
+.gallery{display:grid;grid-template-columns:1.5fr 1fr 1fr;
+  grid-template-rows:repeat(2,clamp(170px,20vw,290px));gap:8px;margin-top:clamp(34px,4vw,56px)}
+.gallery figure{overflow:hidden;position:relative;background:var(--granite)}
+.gallery img{width:100%;height:100%;object-fit:cover;transition:scale 900ms var(--ease-soft)}
+.gallery figure:hover img{scale:1.035}
+.gallery .g-tall{grid-row:span 2}
+
+/* ═══════════════ CTA FINAL ═══════════════ */
+.close{text-align:center;background:var(--ink);position:relative;overflow:hidden}
+.close__inner{max-width:660px;margin:0 auto;position:relative;z-index:1}
+.close img.mark{width:min(400px,72vw);margin:0 auto clamp(26px,3.6vw,40px)}
+.close h2{margin-bottom:18px}
+.close p{margin:0 auto 36px;max-width:44ch}
+.close__actions{display:flex;gap:18px;justify-content:center;flex-wrap:wrap}
+
+/* ═══════════════ CONTATO ═══════════════ */
+.contact{background:var(--pearl)}
+.contact__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--granite);border-block:1px solid var(--granite);margin-top:clamp(34px,4vw,54px)}
+.contact__item{background:var(--pearl);padding:clamp(26px,3vw,40px)}
+.contact__item dt{font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:14px}
+.contact__item dd{font-family:var(--display);font-size:clamp(17px,1.7vw,21px);color:var(--ink);line-height:1.4}
+.contact__item dd a{text-decoration:none;border-bottom:1px solid var(--granite);transition:border-color var(--dur-base)}
+.contact__item dd a:hover{border-color:var(--gold)}
+.contact__item small{display:block;font-size:13px;color:var(--body);margin-top:8px;font-family:var(--sans)}
+
+/* ═══════════════ RODAPÉ ═══════════════ */
+.foot{background:var(--ink);padding:clamp(40px,5vw,64px) 0 32px}
+.foot__top{display:flex;justify-content:space-between;align-items:center;gap:28px;flex-wrap:wrap;padding-bottom:30px;border-bottom:1px solid var(--ink-line)}
+.foot img{height:34px;width:auto}
+.foot__nav{display:flex;gap:26px;list-style:none;flex-wrap:wrap}
+.foot__nav a{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(238,239,239,.6);text-decoration:none;transition:color var(--dur-quick)}
+.foot__nav a:hover{color:var(--gold)}
+.foot__bot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;padding-top:24px;font-size:12px;color:rgba(238,239,239,.42)}
+.foot__social{display:flex;gap:20px}
+.foot__social a{color:rgba(238,239,239,.6);text-decoration:none;transition:color var(--dur-quick)}
+.foot__social a:hover{color:var(--gold)}
+
+/* ═══════════════ BOTÃO FLUTUANTE DE WHATSAPP ═══════════════ */
+.float{
+  position:fixed;right:clamp(16px,2.2vw,30px);bottom:clamp(16px,2.2vw,30px);z-index:70;
+  width:60px;height:60px;border-radius:999px;display:grid;place-items:center;
+  background:var(--ink);color:var(--gold);border:1px solid var(--gold);text-decoration:none;
+  box-shadow:0 14px 36px rgba(21,23,26,.34);
+  translate:0 96px;opacity:0;pointer-events:none;
+  transition:translate var(--dur-slow) var(--ease-out),opacity var(--dur-slow),
+             background var(--dur-base) var(--ease-soft),color var(--dur-base) var(--ease-soft),
+             scale var(--dur-quick) var(--ease-out);
+}
+.float.is-on{translate:0 0;opacity:1;pointer-events:auto}
+.float:hover,.float:focus-visible{background:var(--gold);color:var(--ink);scale:1.05}
+.float:focus-visible{outline:none;
+  box-shadow:0 14px 36px rgba(21,23,26,.34),0 0 0 3px var(--pearl),0 0 0 6px var(--ink)}
+.float:active{scale:.97}
+.float svg{width:27px;height:27px;fill:currentColor;position:relative;z-index:2}
+/* pulso: dois anéis dourados que se abrem e somem, em defasagem */
+.float__ring{
+  position:absolute;inset:-1px;border-radius:999px;border:1px solid currentColor;
+  opacity:0;pointer-events:none;
+}
+.float.is-on .float__ring{animation:ring 3.2s var(--ease-out) 8}
+.float.is-on .float__ring:nth-of-type(2){animation-delay:1.6s}
+@keyframes ring{
+  0%{scale:1;opacity:.6}
+  62%{opacity:0}
+  100%{scale:1.85;opacity:0}
+}
+/* rótulo à esquerda, só onde existe cursor */
+.float__txt{
+  position:absolute;right:calc(100% + 12px);top:50%;translate:8px -50%;
+  white-space:nowrap;background:var(--ink);color:var(--gold);
+  border:1px solid var(--ink-line);padding:9px 16px;
+  font-size:11px;letter-spacing:.16em;text-transform:uppercase;
+  opacity:0;pointer-events:none;
+  transition:opacity var(--dur-base) var(--ease-soft),translate var(--dur-base) var(--ease-out);
+}
+@media (hover:hover) and (pointer:fine){
+  .float:hover .float__txt,.float:focus-visible .float__txt{opacity:1;translate:0 -50%}
+}
+
+/* ═══════════════ REVEAL ═══════════════ */
+.reveal{opacity:1}
+@supports (animation-timeline:view()){
+  .reveal{animation:rv linear both;animation-timeline:view();animation-range:entry 4% cover 22%}
+  .reveal--soft{animation-range:entry 2% cover 16%}
+  @keyframes rv{from{opacity:0;translate:0 26px}to{opacity:1;translate:0 0}}
+}
+html.io .reveal{opacity:0;translate:0 26px;
+  transition:opacity var(--dur-slow) var(--ease-out),translate var(--dur-slow) var(--ease-out)}
+html.io .reveal.in{opacity:1;translate:0 0}
+html.io .st>*{transition-delay:calc(var(--i,0)*70ms)}
+
+/* ═══════════════ RESPONSIVO ═══════════════ */
+@media (max-width:1080px){
+  .facts__grid{grid-template-columns:repeat(2,1fr)}
+  .cards{grid-template-columns:repeat(2,1fr)}
+  .split{grid-template-columns:1fr;gap:38px}
+  .split--flip .split__media{order:0}
+  .contact__grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:860px){
+  .nav__links,.nav__cta{display:none}
+  .burger{display:block}
+  .hero__cue{display:none}
+  .gallery{grid-template-columns:1fr 1fr;grid-template-rows:repeat(3,30vw)}
+  .works__grid{grid-template-columns:repeat(3,1fr)}
+  .diffs{grid-template-columns:1fr}
+  .contact__grid{grid-template-columns:1fr}
+  .hero__box{padding-inline:20px}
+}
+@media (max-width:620px){
+  .cards{grid-template-columns:1fr}
+  .gallery{grid-template-columns:1fr;grid-template-rows:repeat(6,58vw)}
+  .gallery .g-tall{grid-row:span 1}
+  .works__grid{grid-template-columns:repeat(2,1fr)}
+  .facts__grid{grid-template-columns:1fr}
+  .services__head{flex-direction:column;align-items:flex-start;gap:18px}
+  .hero__actions{flex-direction:column;align-items:stretch;width:100%}
+  .hero__actions .btn{width:100%}
+  .close__actions .btn{width:100%}
+  .figure::after{inset:auto -8px -8px auto}
+  .split__list b{width:auto}
+  .split__list li{flex-direction:column;gap:4px}
+}
+
+/* ═══════════════ MOVIMENTO REDUZIDO ═══════════════ */
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:1ms !important;animation-delay:0ms !important;
+    animation-iteration-count:1 !important;transition-duration:120ms !important}
+  .hero__logo,.hero h1,.hero__sub,.hero__actions{opacity:1;animation:none}
+  .hero__frame i{scale:1 1 !important;animation:none !important}
+  .reveal{animation:none !important;opacity:1 !important;translate:none !important}
+  html.io .reveal{opacity:1;translate:none}
+  .card__img img,.gallery img{transition:opacity 120ms}
+  .card:hover .card__img img,.gallery figure:hover img{scale:1}
+  .works__grid figure:hover img{scale:1}
+  .float.is-on .float__ring{animation:none;opacity:0}
+  .float:hover,.float:focus-visible,.float:active{scale:1}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#conteudo">Ir para o conteúdo</a>
+
+<!-- ══════════ NAV ══════════ -->
+<header class="nav" id="nav">
+  <a class="nav__logo" href="#topo" aria-label="Letícia Antunes Studio — início">
+    <img src="assets/logo-white.png" alt="Letícia Antunes Studio" width="520" height="124">
+  </a>
+  <nav aria-label="Principal">
+    <ul class="nav__links">
+      <li><a href="#estudio">O estúdio</a></li>
+      <li><a href="#servicos">Serviços</a></li>
+      <li><a href="#noivas">Noivas</a></li>
+      <li><a href="#ambiente">Ambiente</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+  </nav>
+  <a class="nav__cta" href="https://wa.me/5531996471477?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio." target="_blank" rel="noopener">Agendar</a>
+  <button class="burger" id="burger" aria-expanded="false" aria-controls="drawer" aria-label="Abrir menu"><i></i><i></i></button>
+</header>
+
+<div class="drawer" id="drawer" hidden>
+  <a href="#estudio">O estúdio</a>
+  <a href="#servicos">Serviços</a>
+  <a href="#noivas">Noivas</a>
+  <a href="#ambiente">Ambiente</a>
+  <a href="#contato">Contato</a>
+  <a class="btn btn--solid" href="https://wa.me/5531996471477?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio." target="_blank" rel="noopener"><span>Agendar no WhatsApp</span></a>
+</div>
+
+<main id="conteudo">
+
+<!-- ══════════ HERO ══════════ -->
+<section class="hero" id="topo">
+  <div class="hero__media">
+    <img src="assets/hero-poster.webp" alt="" width="1280" height="720" fetchpriority="high" decoding="async">
+    <video id="heroVideo" muted playsinline autoplay loop preload="none"
+           poster="assets/hero-poster.webp" aria-hidden="true" tabindex="-1">
+      <source src="assets/hero.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="hero__scrim"></div>
+
+  <div class="hero__inner on-dark">
+   <div class="hero__box">
+    <span class="hero__frame" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+    <img class="hero__logo" src="assets/logo-gold.png" alt="Letícia Antunes Studio" width="760" height="182" fetchpriority="high">
+    <h1>Cabelo, unhas e pele <span class="gold">no mesmo endereço.</span></h1>
+    <p class="hero__sub">Um estúdio completo em Nova Suíça, onde cada serviço fica com quem faz aquilo o dia inteiro. Você resolve tudo numa visita só.</p>
+    <div class="hero__actions">
+      <a class="btn btn--solid" href="https://wa.me/5531996471477?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio." target="_blank" rel="noopener"><span>Agendar no WhatsApp</span></a>
+      <a class="btn btn--line" href="#servicos"><span>Ver os serviços</span></a>
+    </div>
+   </div>
+  </div>
+
+  <a class="hero__cue" href="#estudio" aria-label="Continuar para o estúdio"><span>Role</span><i></i></a>
+</section>
+
+<!-- ══════════ FATOS ══════════ -->
+<section class="facts on-dark" aria-label="O estúdio em números">
+  <div class="wrap" style="padding-inline:0">
+    <dl class="facts__grid">
+      <div class="fact reveal"><dt>2018</dt><dd>Ano em que o estúdio abriu, em novembro</dd></div>
+      <div class="fact reveal"><dt>6 frentes</dt><dd>Cabelo, unhas, corpo, pele, sobrancelhas e noivas</dd></div>
+      <div class="fact reveal"><dt>Autoclave</dt><dd>Esterilização de todos os utensílios de manicure e estética</dd></div>
+      <div class="fact reveal"><dt>Nova Suíça</dt><dd>Rua Guarujá, 19 — Belo Horizonte</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- ══════════ O ESTÚDIO ══════════ -->
+<section id="estudio">
+  <div class="wrap">
+    <div class="split">
+      <div class="split__media reveal reveal--soft">
+        <figure class="figure figure--left">
+          <img src="assets/estudio.webp" alt="Entrada do Letícia Antunes Studio, com a marca aplicada na parede" width="900" height="1200" loading="lazy" decoding="async">
+        </figure>
+      </div>
+      <div class="split__body">
+        <p class="eyebrow reveal">O estúdio</p>
+        <h2 class="reveal">Oito anos no mesmo lugar, em Nova Suíça</h2>
+        <p class="lead reveal">O Letícia Antunes Studio abriu em novembro de 2018 e faz oito anos agora em novembro. A ideia continua a mesma do primeiro dia: juntar num espaço só o que normalmente obriga você a marcar três horários em três endereços diferentes.</p>
+        <p class="reveal">Cada serviço fica com quem é da área. Cabeleireiros cuidam de cabelo, manicures cuidam de unhas, esteticistas e maquiadores cuidam de rosto e corpo. Todo mundo em formação constante.</p>
+        <ul class="split__list reveal">
+          <li><b>Mulheres</b><span>Todos os serviços do estúdio, do cabelo à estética.</span></li>
+          <li><b>Homens</b><span>Corte, barba, unhas e sobrancelhas.</span></li>
+          <li><b>Crianças</b><span>Corte, escova e hidratação.</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ SERVIÇOS ══════════ -->
+<section class="services" id="servicos">
+  <div class="wrap">
+    <div class="services__head">
+      <div>
+        <p class="eyebrow reveal">Serviços</p>
+        <h2 class="reveal" style="margin-top:18px">Do corte à limpeza de pele</h2>
+      </div>
+      <p class="reveal">Você marca pelo WhatsApp e a gente encaixa mais de um serviço no mesmo horário sempre que a agenda permite.</p>
+    </div>
+
+    <div class="cards st">
+      <a class="card reveal" style="--i:0" href="https://wa.me/5531996471477?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20cabelo." target="_blank" rel="noopener">
+        <div class="card__img"><img src="assets/srv-cabelo.webp" alt="Corte bob assimétrico em cabelo castanho escuro, visto de perfil" width="760" height="570" loading="lazy" decoding="async"></div>
+        <div class="card__body">
+          <h3>Cabelo e visagismo</h3>
+          <p>Cortes e penteados pensados a partir do seu rosto, do seu tipo de cabelo e da rotina que você tem para cuidar dele.</p>
+          <span class="card__more">Agendar</span>
+        </div>
+      </a>
+      <a class="card reveal" style="--i:1" href="https://wa.me/5531996471477?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20colora%C3%A7%C3%A3o%20ou%20tratamento%20capilar." target="_blank" rel="noopener">
+        <div class="card__img"><img src="assets/srv-coloracao.webp" alt="Cabelo longo loiro com mechas, feito no estúdio" width="760" height="570" loading="lazy" decoding="async"></div>
+        <div class="card__body">
+          <h3>Coloração e tratamentos</h3>
+          <p>Colorações, tratamentos capilares e alisamentos. A avaliação do fio vem antes de qualquer química.</p>
+          <span class="card__more">Agendar</span>
+        </div>
+      </a>
+      <a class="card reveal" style="--i:2" href="https://wa.me/5531996471477?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20manicure%20ou%20pedicure." target="_blank" rel="noopener">
+        <div class="card__img"><img src="assets/srv-unhas.webp" alt="Mãos com unhas em francesinha branca feitas no estúdio" width="760" height="570" loading="lazy" decoding="async"></div>
+        <div class="card__body">
+          <h3>Manicure e pedicure</h3>
+          <p>Unhas tradicionais, alongamentos e spa dos pés e das mãos. Todo utensílio passa pela autoclave antes de voltar para a mesa.</p>
+          <span class="card__more">Agendar</span>
+        </div>
+      </a>
+      <a class="card reveal" style="--i:3" href="https://wa.me/5531996471477?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20est%C3%A9tica%20corporal." target="_blank" rel="noopener">
+        <div class="card__img"><img src="assets/srv-corporal.webp" alt="Massagem nas costas em maca de estética" width="760" height="570" loading="lazy" decoding="async"></div>
+        <div class="card__body">
+          <h3>Estética corporal</h3>
+          <p>Massagens e depilação, a cera ou a laser, em sala reservada.</p>
+          <span class="card__more">Agendar</span>
+        </div>
+      </a>
+      <a class="card reveal" style="--i:4" href="https://wa.me/5531996471477?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20cuidados%20de%20pele." target="_blank" rel="noopener">
+        <div class="card__img"><img src="assets/srv-pele.webp" alt="Aplicação de procedimento estético no rosto" width="760" height="570" loading="lazy" decoding="async"></div>
+        <div class="card__body">
+          <h3>Cuidados de pele</h3>
+          <p>Limpeza de pele, peelings e botox facial com esteticista, no mesmo endereço em que você faz o cabelo.</p>
+          <span class="card__more">Agendar</span>
+        </div>
+      </a>
+      <a class="card reveal" style="--i:5" href="https://wa.me/5531996471477?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20sobrancelhas%20ou%20maquiagem." target="_blank" rel="noopener">
+        <div class="card__img"><img src="assets/srv-maquiagem.webp" alt="Maquiagem em tons neutros com penteado trançado, feita no estúdio" width="760" height="570" loading="lazy" decoding="async"></div>
+        <div class="card__body">
+          <h3>Sobrancelhas e maquiagem</h3>
+          <p>Design de sobrancelhas e maquiagem para o dia a dia ou para a festa da semana.</p>
+          <span class="card__more">Agendar</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ TRABALHOS ══════════ -->
+<section class="works dark on-dark" id="trabalhos">
+  <div class="works__head">
+    <p class="eyebrow reveal">Trabalhos</p>
+    <h2 class="reveal">Feito aqui</h2>
+    <p class="reveal">Clientes do estúdio, fotografadas na cadeira, sem produção.</p>
+  </div>
+  <div class="works__grid st">
+    <figure class="reveal" style="--i:0"><img src="assets/work-1.webp" alt="Cabelo longo loiro com ondas" width="620" height="620" loading="lazy" decoding="async"></figure>
+    <figure class="reveal" style="--i:1"><img src="assets/work-2.webp" alt="Corte médio ondulado com mechas douradas" width="620" height="620" loading="lazy" decoding="async"></figure>
+    <figure class="reveal" style="--i:2"><img src="assets/work-3.webp" alt="Loiro iluminado com ondas longas" width="620" height="620" loading="lazy" decoding="async"></figure>
+    <figure class="reveal" style="--i:3"><img src="assets/work-4.webp" alt="Loiro acinzentado com ondas" width="620" height="620" loading="lazy" decoding="async"></figure>
+    <figure class="reveal" style="--i:4"><img src="assets/work-5.webp" alt="Mechas loiras conferidas na raiz" width="620" height="620" loading="lazy" decoding="async"></figure>
+    <figure class="reveal" style="--i:5"><img src="assets/work-6.webp" alt="Penteado com trança lateral e ondas" width="620" height="620" loading="lazy" decoding="async"></figure>
+  </div>
+</section>
+
+<!-- ══════════ NOIVAS ══════════ -->
+<section class="dark on-dark" id="noivas">
+  <div class="wrap">
+    <div class="split split--flip">
+      <div class="split__media reveal reveal--soft">
+        <figure class="figure">
+          <img src="assets/noiva.webp" alt="Cliente com penteado trançado e maquiagem completa feitos no estúdio" width="900" height="1200" loading="lazy" decoding="async">
+        </figure>
+      </div>
+      <div class="split__body">
+        <p class="eyebrow reveal">Noivas</p>
+        <h2 class="reveal">O dia da noiva, do primeiro pincel até a hora de sair</h2>
+        <p class="lead reveal">Maquiagem, penteado exclusivo, assessoria e vestimenta. A equipe acompanha o dia inteiro, e você não precisa dividir a manhã entre um salão, uma maquiadora e alguém para ajudar a vestir.</p>
+        <p class="reveal">Combine a data com antecedência: a agenda de noivas é separada da agenda do dia a dia.</p>
+        <p class="reveal" style="margin-top:34px">
+          <a class="btn btn--solid" href="https://wa.me/5531996471477?text=Ol%C3%A1%21%20Sou%20noiva%20e%20gostaria%20de%20saber%20sobre%20o%20dia%20da%20noiva." target="_blank" rel="noopener"><span>Falar sobre o meu casamento</span></a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ DIFERENCIAIS ══════════ -->
+<section class="dark--soft on-dark" id="diferenciais">
+  <div class="wrap">
+    <p class="eyebrow reveal">Por que aqui</p>
+    <h2 class="reveal" style="margin-top:18px;max-width:18ch">Quatro coisas que mudam a sua tarde</h2>
+    <div class="diffs st">
+      <article class="diff reveal" style="--i:0">
+        <span class="diff__n">01</span>
+        <h3>Tudo num só lugar</h3>
+        <p>Cabelo, unhas, rosto e corpo no mesmo espaço. Você não atravessa a cidade entre um serviço e outro, e o tempo que sobra é seu.</p>
+      </article>
+      <article class="diff reveal" style="--i:1">
+        <span class="diff__n">02</span>
+        <h3>Cada um na sua especialidade</h3>
+        <p>A equipe é dividida por área: cabeleireiros, manicures, esteticistas e maquiadores. Ninguém faz um pouco de tudo, e todos seguem em formação.</p>
+      </article>
+      <article class="diff reveal" style="--i:2">
+        <span class="diff__n">03</span>
+        <h3>Esterilização em autoclave</h3>
+        <p>Os utensílios de manicure e estética passam por lavagem e esterilização em autoclave antes de encostar em você. É o mesmo processo usado em clínica.</p>
+      </article>
+      <article class="diff reveal" style="--i:3">
+        <span class="diff__n">04</span>
+        <h3>Um espaço para ficar</h3>
+        <p>O salão foi planejado para ser confortável de verdade, com espaço entre as estações e luz boa. Dá para passar a tarde sem pressa.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ AMBIENTE ══════════ -->
+<section id="ambiente">
+  <div class="wrap">
+    <div class="services__head" style="margin-bottom:0">
+      <div>
+        <p class="eyebrow reveal">Ambiente</p>
+        <h2 class="reveal" style="margin-top:18px">O lugar onde você vai passar a tarde</h2>
+      </div>
+      <p class="reveal">Estações separadas por serviço, piso de granito e luz que mostra a cor real do cabelo.</p>
+    </div>
+    <div class="gallery st">
+      <figure class="g-tall reveal" style="--i:0"><img src="assets/amb-tall.webp" alt="Salão do estúdio visto de ponta a ponta, com estações de cabelo e piso de granito" width="900" height="1200" loading="lazy" decoding="async"></figure>
+      <figure class="reveal" style="--i:1"><img src="assets/amb-1.webp" alt="Lavatórios do estúdio com plantas suspensas" width="760" height="570" loading="lazy" decoding="async"></figure>
+      <figure class="reveal" style="--i:2"><img src="assets/amb-3.webp" alt="Estações de cabelo com espelhos e bancada branca" width="760" height="570" loading="lazy" decoding="async"></figure>
+      <figure class="reveal" style="--i:3"><img src="assets/amb-2.webp" alt="Corredor do salão, com lavatórios e plantas" width="760" height="570" loading="lazy" decoding="async"></figure>
+      <figure class="reveal" style="--i:4"><img src="assets/amb-4.webp" alt="Fachada do Letícia Antunes Studio na Rua Guarujá, 19" width="760" height="570" loading="lazy" decoding="async"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ CTA FINAL ══════════ -->
+<section class="close on-dark">
+  <div class="wrap">
+    <div class="close__inner">
+      <img class="mark reveal reveal--soft" src="assets/logo-gold.png" alt="Letícia Antunes Studio" width="760" height="182" loading="lazy">
+      <h2 class="reveal">Vamos marcar?</h2>
+      <p class="reveal">O agendamento é pelo WhatsApp. Manda o que você quer fazer e a gente encaixa no melhor horário para você.</p>
+      <div class="close__actions reveal">
+        <a class="btn btn--solid" href="https://wa.me/5531996471477?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio." target="_blank" rel="noopener"><span>Agendar no WhatsApp</span></a>
+        <a class="btn btn--line" href="https://www.instagram.com/leticiaantunesstudio/" target="_blank" rel="noopener"><span>Ver o Instagram</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ CONTATO ══════════ -->
+<section class="contact" id="contato">
+  <div class="wrap">
+    <p class="eyebrow reveal">Contato</p>
+    <h2 class="reveal" style="margin-top:18px;max-width:16ch">Estamos na Rua Guarujá, 19</h2>
+    <dl class="contact__grid st">
+      <div class="contact__item reveal" style="--i:0">
+        <dt>Endereço</dt>
+        <dd><a href="https://www.google.com/maps/search/?api=1&query=Rua+Guaruj%C3%A1%2C+19+-+Nova+Su%C3%AD%C3%A7a%2C+Belo+Horizonte" target="_blank" rel="noopener">Rua Guarujá, 19</a></dd>
+        <small>Nova Suíça, Belo Horizonte — MG</small>
+      </div>
+      <div class="contact__item reveal" style="--i:1">
+        <dt>WhatsApp</dt>
+        <dd><a href="https://wa.me/5531996471477?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio." target="_blank" rel="noopener">(31) 99647-1477</a></dd>
+        <small>Agendamentos e dúvidas</small>
+      </div>
+      <div class="contact__item reveal" style="--i:2">
+        <dt>E-mail</dt>
+        <dd><a href="mailto:leticiaantunesstudio@gmail.com">leticiaantunesstudio@gmail.com</a></dd>
+        <small>Parcerias e orçamentos</small>
+      </div>
+    </dl>
+    <!-- Horário de funcionamento: incluir aqui quando o estúdio informar os dias e horários.
+         Sugestão de marcação: <div class="contact__item"><dt>Horário</dt><dd>Seg a Sáb</dd><small>09h às 19h</small></div>
+         e replicar em openingHours no JSON-LD abaixo. -->
+  </div>
+</section>
+
+</main>
+
+<!-- ══════════ RODAPÉ ══════════ -->
+<footer class="foot on-dark">
+  <div class="wrap">
+    <div class="foot__top">
+      <img src="assets/logo-white.png" alt="Letícia Antunes Studio" width="520" height="124" loading="lazy">
+      <ul class="foot__nav">
+        <li><a href="#estudio">O estúdio</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#noivas">Noivas</a></li>
+        <li><a href="#ambiente">Ambiente</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </div>
+    <div class="foot__bot">
+      <span>© 2026 Letícia Antunes Studio · Rua Guarujá, 19 — Nova Suíça, Belo Horizonte</span>
+      <div class="foot__social">
+        <a href="https://www.instagram.com/leticiaantunesstudio/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.facebook.com/leticiaantunesstudio" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://wa.me/5531996471477" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Botão flutuante de WhatsApp.
+     Para trocar a mensagem que chega pré-escrita, edite o texto depois de "?text=".
+     Espaço = %20, acento e pontuação precisam ir codificados (ex.: "Olá!" vira "Ol%C3%A1%21").
+     Mensagem atual: "Olá! Vim pelo site do Letícia Antunes Studio e gostaria de agendar um horário." -->
+<a class="float" id="float"
+   href="https://wa.me/5531996471477?text=Ol%C3%A1%21%20Vim%20pelo%20site%20do%20Let%C3%ADcia%20Antunes%20Studio%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio."
+   target="_blank" rel="noopener" aria-label="Agendar pelo WhatsApp">
+  <span class="float__ring" aria-hidden="true"></span>
+  <span class="float__ring" aria-hidden="true"></span>
+  <span class="float__txt" aria-hidden="true">Agendar no WhatsApp</span>
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2zm5.8 14.09c-.25.7-1.44 1.33-1.99 1.42-.51.08-1.15.11-1.86-.12-.43-.14-.98-.32-1.69-.62-2.97-1.28-4.91-4.27-5.06-4.47-.15-.2-1.21-1.61-1.21-3.07s.77-2.18 1.04-2.48c.27-.3.59-.37.79-.37.2 0 .39 0 .57.01.18.01.43-.07.67.51.25.6.85 2.06.92 2.21.07.15.12.32.02.52-.1.2-.15.32-.3.5-.15.17-.31.39-.44.52-.15.15-.3.31-.13.61.17.3.76 1.25 1.63 2.03 1.12 1 2.06 1.3 2.36 1.45.3.15.47.12.65-.07.17-.2.75-.87.95-1.17.2-.3.4-.25.67-.15.27.1 1.72.81 2.02.96.3.15.5.22.57.35.07.12.07.72-.18 1.42z"/></svg>
+</a>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"BeautySalon",
+  "name":"Letícia Antunes Studio",
+  "description":"Salão de beleza completo em Nova Suíça, Belo Horizonte: cabelo e visagismo, manicure e pedicure, estética facial e corporal, cuidados de pele e serviços para noivas.",
+  "image":"assets/hero-poster.jpg",
+  "logo":"assets/logo-gold.png",
+  "url":"https://leticiaantunesstudio.com.br/",
+  "telephone":"+5531996471477",
+  "email":"leticiaantunesstudio@gmail.com",
+  "foundingDate":"2018-11",
+  "priceRange":"$$",
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"Rua Guarujá, 19",
+    "addressLocality":"Belo Horizonte",
+    "addressRegion":"MG",
+    "addressCountry":"BR"
+  },
+  "sameAs":[
+    "https://www.instagram.com/leticiaantunesstudio/",
+    "https://www.facebook.com/leticiaantunesstudio"
+  ],
+  "hasOfferCatalog":{
+    "@type":"OfferCatalog",
+    "name":"Serviços",
+    "itemListElement":[
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Cabelo e visagismo"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Coloração e tratamentos capilares"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Manicure e pedicure"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Estética corporal"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Cuidados de pele"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Design de sobrancelhas e maquiagem"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Dia da noiva"}}
+    ]
+  }
+}
+</script>
+
+<script>
+(function(){
+  var root=document.documentElement;
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* nav: fundo sólido depois do primeiro scroll */
+  var nav=document.getElementById('nav');
+  var onScroll=function(){
+    nav.classList.toggle('is-stuck',scrollY>40);
+    var f=document.getElementById('float');
+    if(f) f.classList.toggle('is-on',scrollY>window.innerHeight*0.7);
+  };
+  addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  /* menu mobile */
+  var burger=document.getElementById('burger'),drawer=document.getElementById('drawer');
+  function setMenu(open){
+    burger.setAttribute('aria-expanded',open);
+    burger.setAttribute('aria-label',open?'Fechar menu':'Abrir menu');
+    if(open){drawer.hidden=false;requestAnimationFrame(function(){drawer.classList.add('is-open')});}
+    else{drawer.classList.remove('is-open');setTimeout(function(){drawer.hidden=true},320);}
+    document.body.style.overflow=open?'hidden':'';
+  }
+  burger.addEventListener('click',function(){setMenu(burger.getAttribute('aria-expanded')!=='true')});
+  drawer.addEventListener('click',function(e){if(e.target.tagName==='A')setMenu(false)});
+  addEventListener('keydown',function(e){if(e.key==='Escape'&&burger.getAttribute('aria-expanded')==='true')setMenu(false)});
+
+  /* vídeo do hero: só carrega quando a rede permite e o usuário não pediu menos movimento */
+  var v=document.getElementById('heroVideo');
+  var conn=navigator.connection||{};
+  var slow=conn.saveData===true||/(^|-)2g$/.test(conn.effectiveType||'');
+  if(v&&!reduce&&!slow){
+    var start=function(){
+      v.classList.add('is-ready');
+      var pr=v.play();
+      if(pr&&pr.catch){pr.catch(function(){
+        // autoplay bloqueado: tenta de novo no primeiro toque ou clique
+        var retry=function(){v.play().catch(function(){});removeEventListener('pointerdown',retry);removeEventListener('touchstart',retry)};
+        addEventListener('pointerdown',retry,{once:true});addEventListener('touchstart',retry,{once:true});
+      })}
+    };
+    v.addEventListener('loadeddata',start,{once:true});
+    v.addEventListener('error',function(){v.remove()},{once:true});
+    v.preload='auto';v.load();
+    if(v.readyState>=2)start();
+    // economiza bateria: pausa quando o hero sai da tela ou a aba fica oculta
+    if('IntersectionObserver' in window){
+      new IntersectionObserver(function(es){
+        es.forEach(function(e){ if(!v.isConnected)return;
+          if(e.isIntersecting){v.play().catch(function(){})}else{v.pause()} })
+      },{threshold:0.01}).observe(v);
+    }
+    document.addEventListener('visibilitychange',function(){
+      if(!v.isConnected)return;
+      if(document.hidden){v.pause()}else{v.play().catch(function(){})}
+    });
+  }else if(v){v.remove();}
+
+  /* reveal por scroll — só quando o browser não tem animation-timeline */
+  if(!CSS.supports('animation-timeline','view()')&&!reduce){
+    root.classList.add('io');
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})
+    },{rootMargin:'0px 0px -8% 0px',threshold:0.06});
+    document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+  }
+})();
+</script>
+</body>
+</html>
