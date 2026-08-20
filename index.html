@@ -6,15 +6,30 @@
 <title>Letícia Antunes Studio — Salão completo em Nova Suíça, Belo Horizonte</title>
 <meta name="description" content="Cabelo, unhas, estética facial e corporal no mesmo endereço, em Nova Suíça. Equipe especializada por serviço e esterilização em autoclave. Agende pelo WhatsApp.">
 <meta name="theme-color" content="#15171A">
+<meta name="robots" content="index, follow">
+<!-- Domínio provisório: troque nas 3 URLs abaixo (canonical, og:url, og:image/twitter:image)
+     quando o endereço definitivo do site estiver decidido. -->
 <link rel="canonical" href="https://leticiaantunesstudio.com.br/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Letícia Antunes Studio">
+<meta property="og:url" content="https://leticiaantunesstudio.com.br/">
 <meta property="og:title" content="Letícia Antunes Studio — Salão completo em Nova Suíça, BH">
 <meta property="og:description" content="Cabelo, unhas, estética facial e corporal no mesmo endereço. Equipe especializada por serviço e esterilização em autoclave.">
-<meta property="og:image" content="assets/hero-poster.jpg">
+<meta property="og:image" content="https://leticiaantunesstudio.com.br/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Letícia Antunes Studio">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="assets/logo-gold.png">
+<meta name="twitter:title" content="Letícia Antunes Studio — Salão completo em Nova Suíça, BH">
+<meta name="twitter:description" content="Cabelo, unhas, estética facial e corporal no mesmo endereço. Equipe especializada por serviço e esterilização em autoclave.">
+<meta name="twitter:image" content="https://leticiaantunesstudio.com.br/assets/og-image.jpg">
+<link rel="icon" href="assets/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
 <link rel="preload" as="image" href="assets/hero-poster.webp" fetchpriority="high">
 <link rel="preload" as="font" type="font/woff2" href="assets/fonts/Marcellus-latin.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="assets/fonts/DMSans-latin.woff2" crossorigin>
@@ -354,38 +369,45 @@ section{padding-block:var(--sec)}
 .foot__social a:hover{color:var(--gold)}
 
 /* ═══════════════ BOTÃO FLUTUANTE DE WHATSAPP ═══════════════ */
+/* Verde do WhatsApp — o único elemento da página fora da paleta grafite/dourado,
+   de propósito: é o botão que precisa ser reconhecido em um piscar de olhos como
+   "isso abre o WhatsApp". Não é o #25D366 puro: nesse tom o ícone branco fica com
+   contraste 1.98:1, abaixo do mínimo de 3:1 da WCAG para ícone de interface.
+   Escurecendo para a mesma matiz em #28854E o contraste sobe para 4.6:1 sem deixar
+   de ser reconhecido como o verde do WhatsApp. */
 .float{
+  --wa: #28854E; --wa-dark: #1F663C;
   position:fixed;right:clamp(16px,2.2vw,30px);bottom:clamp(16px,2.2vw,30px);z-index:70;
   width:60px;height:60px;border-radius:999px;display:grid;place-items:center;
-  background:var(--ink);color:var(--gold);border:1px solid var(--gold);text-decoration:none;
-  box-shadow:0 14px 36px rgba(21,23,26,.34);
+  background:var(--wa);color:#fff;border:1px solid rgba(255,255,255,.18);text-decoration:none;
+  box-shadow:0 14px 32px rgba(31,102,60,.4);
   translate:0 96px;opacity:0;pointer-events:none;
   transition:translate var(--dur-slow) var(--ease-out),opacity var(--dur-slow),
-             background var(--dur-base) var(--ease-soft),color var(--dur-base) var(--ease-soft),
+             background var(--dur-base) var(--ease-soft),
              scale var(--dur-quick) var(--ease-out);
 }
 .float.is-on{translate:0 0;opacity:1;pointer-events:auto}
-.float:hover,.float:focus-visible{background:var(--gold);color:var(--ink);scale:1.05}
+.float:hover,.float:focus-visible{background:var(--wa-dark);scale:1.05}
 .float:focus-visible{outline:none;
-  box-shadow:0 14px 36px rgba(21,23,26,.34),0 0 0 3px var(--pearl),0 0 0 6px var(--ink)}
+  box-shadow:0 14px 32px rgba(31,102,60,.4),0 0 0 3px var(--pearl),0 0 0 6px var(--ink)}
 .float:active{scale:.97}
-.float svg{width:27px;height:27px;fill:currentColor;position:relative;z-index:2}
-/* pulso: dois anéis dourados que se abrem e somem, em defasagem */
+.float svg{width:29px;height:29px;fill:#fff;position:relative;z-index:2}
+/* pulso: dois anéis brancos que se abrem e somem, em defasagem */
 .float__ring{
-  position:absolute;inset:-1px;border-radius:999px;border:1px solid currentColor;
+  position:absolute;inset:-1px;border-radius:999px;border:1px solid #fff;
   opacity:0;pointer-events:none;
 }
 .float.is-on .float__ring{animation:ring 3.2s var(--ease-out) 8}
 .float.is-on .float__ring:nth-of-type(2){animation-delay:1.6s}
 @keyframes ring{
-  0%{scale:1;opacity:.6}
+  0%{scale:1;opacity:.55}
   62%{opacity:0}
   100%{scale:1.85;opacity:0}
 }
 /* rótulo à esquerda, só onde existe cursor */
 .float__txt{
   position:absolute;right:calc(100% + 12px);top:50%;translate:8px -50%;
-  white-space:nowrap;background:var(--ink);color:var(--gold);
+  white-space:nowrap;background:var(--ink);color:#fff;
   border:1px solid var(--ink-line);padding:9px 16px;
   font-size:11px;letter-spacing:.16em;text-transform:uppercase;
   opacity:0;pointer-events:none;
@@ -767,7 +789,7 @@ html.io .st>*{transition-delay:calc(var(--i,0)*70ms)}
       <span>© 2026 Letícia Antunes Studio · Rua Guarujá, 19 — Nova Suíça, Belo Horizonte</span>
       <div class="foot__social">
         <a href="https://www.instagram.com/leticiaantunesstudio/" target="_blank" rel="noopener">Instagram</a>
-        <a href="https://www.facebook.com/leticiaantunesstudio" target="_blank" rel="noopener">Facebook</a>
+        <!-- Facebook: sem URL confirmada pelo estúdio. Adicione aqui quando tiver o link da página. -->
         <a href="https://wa.me/5531996471477" target="_blank" rel="noopener">WhatsApp</a>
       </div>
     </div>
@@ -791,10 +813,11 @@ html.io .st>*{transition-delay:calc(var(--i,0)*70ms)}
 {
   "@context":"https://schema.org",
   "@type":"BeautySalon",
+  "@id":"https://leticiaantunesstudio.com.br/#salao",
   "name":"Letícia Antunes Studio",
   "description":"Salão de beleza completo em Nova Suíça, Belo Horizonte: cabelo e visagismo, manicure e pedicure, estética facial e corporal, cuidados de pele e serviços para noivas.",
-  "image":"assets/hero-poster.jpg",
-  "logo":"assets/logo-gold.png",
+  "image":"https://leticiaantunesstudio.com.br/assets/og-image.jpg",
+  "logo":"https://leticiaantunesstudio.com.br/assets/logo-gold.png",
   "url":"https://leticiaantunesstudio.com.br/",
   "telephone":"+5531996471477",
   "email":"leticiaantunesstudio@gmail.com",
@@ -807,9 +830,10 @@ html.io .st>*{transition-delay:calc(var(--i,0)*70ms)}
     "addressRegion":"MG",
     "addressCountry":"BR"
   },
+  "areaServed":{"@type":"City","name":"Belo Horizonte"},
+  "hasMap":"https://www.google.com/maps/search/?api=1&query=Rua+Guaruj%C3%A1%2C+19+-+Nova+Su%C3%AD%C3%A7a%2C+Belo+Horizonte",
   "sameAs":[
-    "https://www.instagram.com/leticiaantunesstudio/",
-    "https://www.facebook.com/leticiaantunesstudio"
+    "https://www.instagram.com/leticiaantunesstudio/"
   ],
   "hasOfferCatalog":{
     "@type":"OfferCatalog",
